@@ -8,7 +8,7 @@ const expenseDataCollected={
     id:Math.random().toString()
 };
 //console.log(expenseDataCollected);
-props.onSaveForm(expenseDataCollected);
+props.onAddExpense(expenseDataCollected);
     }
     
 return(
