@@ -1,7 +1,7 @@
-import ExpenseItem from "./components/ExpenseItem";
-import Expenses from "./components/Expenses";
 
-function App() {
+
+import Expenses from  './components/Expenses/Expenses';
+const App=()=> {
   const expenses = [
     {
       id: 'e1',
@@ -27,7 +27,9 @@ function App() {
     
     <div>
       <h2>Let's get started!</h2>
+      
       <Expenses expenses={expenses}></Expenses>
+      
     </div>
   );
 }
