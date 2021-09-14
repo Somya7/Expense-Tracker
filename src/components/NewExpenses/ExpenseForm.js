@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpensesForm = () => {
+const ExpensesForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setenteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -31,7 +31,8 @@ const expenseData={
     amount:enteredAmount,
     date: new Date(enteredDate)
 }
-console.log(expenseData);
+//console.log(expenseData);
+props.onSaveExpense(expenseData)
 setenteredAmount('');
 setEnteredTitle('');
 setEnteredDate('')
@@ -54,7 +55,7 @@ setEnteredDate('')
         <div className="new-expense__control">
           <label>Date</label>
           <input
-            type="tdate"
+            type="date"
             min="2019-01-01"
             max="2022-12-31"
             value ={enteredDate} //clearing form through 2 way binding
